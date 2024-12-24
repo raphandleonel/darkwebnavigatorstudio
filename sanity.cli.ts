@@ -10,5 +10,5 @@ export default defineCliConfig({
    * Learn more at https://www.sanity.io/docs/cli#auto-updates
    */
   autoUpdates: true,
-  studioHost: 'deepwebnavigator', // Set your Studio hostname
+  studioHost: 'darkwebnavigator', // Set your Studio hostname
 })

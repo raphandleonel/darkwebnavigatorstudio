@@ -6,7 +6,7 @@ import MyLogo from './components/MyLogo'
 
 export default defineConfig({
   name: 'default',
-  title: 'deepwebnavigator',
+  title: 'darkwebnavigator',
   icon: MyLogo,
   projectId: 'o9seh0j0',
   dataset: 'production',
