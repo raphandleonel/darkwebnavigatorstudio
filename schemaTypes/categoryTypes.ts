@@ -1,3 +1,4 @@
+// categoryType.js
 import {defineField, defineType} from 'sanity'
 
 export const categoryType = defineType({
@@ -23,6 +24,14 @@ export const categoryType = defineType({
       title: 'Description',
       type: 'text',
       description: 'A brief description of this category (optional).',
+    }),
+    // Keywords/Tags for Category SEO
+    defineField({
+      name: 'keywords',
+      title: 'Keywords/Tags',
+      type: 'array',
+      of: [{type: 'string'}], // Array of strings for keywords
+      description: 'Comma-separated keywords for SEO (e.g., "react, javascript, frontend").',
     }),
   ],
 })

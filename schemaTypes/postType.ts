@@ -130,5 +130,25 @@ export const postType = defineType({
       validation: (rule) =>
         rule.max(160).warning('SEO descriptions should be under 160 characters for best results.'),
     }),
+    // Links
+    defineField({
+      name: 'links',
+      type: 'array',
+      title: 'Market Links',
+      of: [
+        defineField({
+          type: 'object',
+          name: 'marketLink',
+          fields: [
+            {
+              name: 'name',
+              type: 'string',
+              title: 'Link Name',
+            },
+            {name: 'url', type: 'string', title: 'URL', validation: (rule) => rule.required()},
+          ],
+        }),
+      ],
+    }),
   ],
 })
