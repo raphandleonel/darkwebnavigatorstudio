@@ -92,6 +92,32 @@ export const postType = defineType({
       to: [{type: 'category'}],
       validation: (rule) => rule.required(),
     }),
+    defineField({
+      name: 'cryptocurrency',
+      type: 'array',
+      title: 'Cryptocurrency',
+      of: [
+        {
+          type: 'string',
+          options: {
+            list: [
+              {title: 'Bitcoin (BTC)', value: 'BTC'},
+              {title: 'Ethereum (ETH)', value: 'ETH'},
+              {title: 'Monero (XMR)', value: 'XMR'},
+              {title: 'Litecoin (LTC)', value: 'LTC'},
+              {title: 'Bitcoin Cash (BCH)', value: 'BCH'},
+            ],
+            layout: 'tags',
+          },
+        },
+      ],
+      // hidden: ({parent}) => {
+      //   const categorySlug = parent?.category?.slug?.current
+      //   return !['darknet-vendors-shop', 'deep-web-forums', 'top-dark-web-markets'].includes(
+      //     categorySlug,
+      //   )
+      // },
+    }),
     // Tags
     defineField({
       name: 'tags',
