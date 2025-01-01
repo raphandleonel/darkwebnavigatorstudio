@@ -176,5 +176,13 @@ export const postType = defineType({
         }),
       ],
     }),
+    // Featured Post Flag
+    defineField({
+      name: 'isFeatured',
+      type: 'boolean',
+      title: 'Featured Post',
+      description: 'Flag to mark this post as featured',
+      initialValue: false,
+    }),
   ],
 })
